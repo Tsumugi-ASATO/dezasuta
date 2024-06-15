@@ -1,0 +1,374 @@
+@charset "UTF-8";
+
+body{
+  max-width: 1035px;
+  margin: 60px auto;
+  }
+
+.top{
+  float: left;
+  width: 32.36%;
+  color: #111;
+  font-family: 'Gentium Basic', serif;
+  padding-right: 75px;
+  padding-bottom: 10px;
+}
+
+.top h1{
+  font-family: Georgia, '游明朝', YuMincho, 'Hiragino Mincho ProN', Meiryo, serif;
+  color: #111;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.top p{
+  color: #777;
+  line-height: 1.4;
+  padding-top: 4px;
+}
+
+.pc-navigation{
+  float: right;
+  width: 67.64%;
+  margin-top: 40px;
+}
+
+.pc-navigation li{
+  font-size: 16px;
+  padding-right:16px;
+}
+
+.pc-navigation_main img{
+  margin: 0 0 10px 10px;
+  width: 10px;
+  height: 8px;
+}
+
+
+/*　参考サイト　https://haniwaman.com/parts/post-3822/　　　*/
+
+.pc-navigation ul > li {
+	float: left;
+	position: relative;
+}
+.pc-navigation ul li a {
+	display: block;
+	padding: .4em .8em;
+	color: #333;
+}
+
+.pc-navigation_main ul li a:hover {
+	color: #c49029;
+}
+.pc-navigation ul > li ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+}
+.pc-navigation ul > li li {
+	float: none;
+	width: 220px;
+  padding: 0.5em 1em;
+  color: #5d627b;
+  background: white;
+  border-style: solid;
+  border-color: #ddd;
+  border-width: 1px;
+  box-shadow: 0 1px 3px #ddd;
+}
+.pc-navigation ul li:hover ul {
+	display: block;
+}
+
+/*ここまでがメニューの設定*/
+/*検索ボタン部分の設定*/
+.search{
+  float: right;
+}
+
+.search button {
+  background: none;
+  border: none;
+}
+
+img.search-button{
+  width: 50%;
+}
+
+/*クリックしたら出現されるようにしたかったのですが
+　まだ、色々調べている途中で時間的にできませんでした。*/
+.search_box{
+  display: none;
+}
+
+/*見本サイトのブレイクポイントが783pxだったので今回は782pxで設定*/
+/* 783px（タブレット）以上の場合に適用される */
+@media screen and (min-width:783px) {
+  .sp_navigation{
+    display: none;
+  }
+}
+/* 783pxまで（スマホ・タブレット）の幅の場合に適用される */
+@media screen and (max-width: 783px) {
+  .pc_navigation{
+      display: none;
+  }
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+/*ここまでが783pxまで（スマホ・タブレット）の設定*/
+
+
+img.hero_image{
+  padding-top: 80px;
+}
+
+.hero_text{
+  color: #777;
+  font-size: 27px;
+  font-family: Georgia, '游明朝', YuMincho, 'Hiragino Mincho ProN', Meiryo, serif;
+  line-height: 1.8;
+  margin-bottom: 90px;
+  padding-bottom: 25px;
+}
+
+
+/*main部分*/
+.posts {
+  padding: 20px;
+  /*background: red;*/
+  font-size: 17px;
+
+}
+
+.posts article {
+ /* background-color: #5d627b;*/
+  display: flex;
+  padding-bottom: 80px;
+}
+
+.posts_date {
+  /*background-color: greenyellow;*/
+  float: left;
+  width: 20%;
+  padding: 30px 0;
+  color: #999;
+}
+
+.posts_post-text{
+  /*background-color: #c49029;*/
+  float: right;
+  padding-left:75px;
+  width: 80%;
+}
+
+.posts h2 {
+  /*background-color: blue;*/
+  font-size: 22px; 
+  color: #000;
+  padding: 30px;
+}
+
+.posts h2 a:hover {
+	color: #c49029;
+}
+
+.posts p {
+  /*background-color: aqua;*/
+  color: #666;
+  line-height: 1.8;
+  padding: 0 30px;
+}
+
+/*pagination*/
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 100px;
+  border-bottom: 1px solid #dedede;
+}
+
+.pagination_page-numbers {
+  display: inline-block;
+  color: #333;
+  border: 1px solid #dedede;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.pagination_page-next{
+  display: inline-block;
+  color: #333;
+  border: 1px solid #dedede;
+  text-decoration: none;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+/* ↓ hoverの効果が違うのであとで修正する */
+.pagination a:hover {
+  background-color: #9d9ae2;
+  color: white;
+}
+
+/*section*/
+section{
+  display: flex;
+  padding-top: 80px;
+ }
+
+ section h2{
+  font-size: 20px;
+}
+
+section h3{
+  font-size: 14px;
+  padding-bottom: 30px;
+}
+
+section p{
+  font-size: 17px;
+  line-height: 1.7;
+  color: #666;
+}
+
+.widget_profile{
+  padding-right: 75px;
+  padding-bottom: 100px;
+  width: 32.36%;
+}
+
+.widget_profile_photo{
+  float: left;
+  margin: 0 18px 20px 0;
+}
+
+.widget_profile_photo img{
+  width: 100px;
+  border-radius: 50%;
+}
+
+.widget_profile_name{
+  float: right;
+  width: 50%;
+  height: 120px;
+  padding: 30px 0;
+}
+
+.widget_profile_name_icon{
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+  padding-top: 4px;
+  filter: invert(60%) sepia(0%) saturate(11%) hue-rotate(143deg) brightness(101%) contrast(100%);
+}
+
+.widget_main{
+  width: 67.64%;
+  display: flex;
+}
+
+.widget_main_links{
+  width: 33.3%;
+  padding-right: 21px;
+}
+
+.widget_main_posts{
+  width: 33.3%;
+  padding: 0 21px 0 19px;
+}
+
+.widget_main_posts li{
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.widget_main_posts li a{
+  color: #666;
+  border-bottom: solid 1px #ddd;
+}
+
+.widget_main_posts li a:hover {
+	color: #c49029;
+}
+
+.widget_main_posts_post-date{
+  display: block;
+  font-size: 14px;
+  color: #999;
+  margin-top: 4px;
+}
+
+.widget_main_categories{
+  width: 33.3%;
+  padding-left: 19px;
+}
+
+.widget_main_categories li{
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.widget_main_categories li a{
+  color: #666;
+  border-bottom: solid 1px #ddd;
+}
+
+.widget_main_categories li a:hover {
+	color: #c49029;
+}
+
+.widget_main_categories_search{
+  padding-top: 75px;
+  max-width: 320px;
+}
+
+input[type="text"]{
+  color: #444;
+  font-size: 18px;
+  border: solid 1px #e6e6e6;
+  padding: 0.6em;
+}
+
+
+footer {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  border-top: 1px solid #dedede;
+}
+
+footer p{
+  font-size: 16px;
+  color: #999;
+}
+
+.sns-icon{
+  float: left;
+  width: 32.36%;
+}
+
+.sns-icon img{
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  filter: invert(60%) sepia(0%) saturate(11%) hue-rotate(143deg) brightness(101%) contrast(100%);
+}
+
+.copyright{
+  float: right;
+  width: 67.64%;
+}
