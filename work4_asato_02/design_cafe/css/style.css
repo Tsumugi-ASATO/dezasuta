@@ -31,40 +31,36 @@ h1{
 /* ここから課題部分 */
 
 /*
-
 ユキノ先生へ
-PC版のコーディングが課題なのでとりあえずの見た目はできたのですが
-SP版のこのも加味して考えると、解決できなかった点が何点かあります。
 
-１.MENU内の h3 で表記しているDrinkなどの文字について
-imgとh3,pを同じクラスに指定し
-そのクラスをposition: relative;に指定、
-h3をposition: absolute;　top: 190px;　left: 10px;という
-指定にしたのですが、pxで指定しても%や位置で指定しても
-画面サイズを変更するとimgとh3の位置がずれてしまいます。
+丁寧なFBありがとうございました！
+今回の修正について
+以下にHTML・CSS合わせて
+修正点をまとめました。
 
-２.EVENT内 dateとtextに分けたのですが画面を小さくしていくと
-重なってしまうところがあります。
-こういう場合はメディアクエリなどで設定すればいいのでしょうか？
-それとも現段階でもう少し改良した方がいいのでしょうか？
+１.About us部分について
+画像がSP版だったのでPC版に修正
+imgをdivで囲い、テキストとwidthを50％ずつに指定
 
-３.全体的な話ですがレスポンシブを考えた時に
-コーディングの際に、pxなどの数値で指定したほうが部分と
-倍率で指定した方がいいい部分がしっかりとはわかりませんでした。
-色々と試して倍率の方が良さそうなところは倍率にしたつもりですが
-現段階で変更した方がいいところが他にあったら教えてください。
+２.Menu部分について
+sectionタグの中のsectionタグをdivに変更し
+h3の文字の位置設定を設定しなおしました。
 
-４.cssの記述順について
-チャレンジ課題のFBありがとうございました！
-すごく参考になりました！
-記述順について以下の順を意識して並び替えました。
+３.Gallery部分について
+imgのwidthを20％ずつに設定し、横スクロールにならないように修正
 
-フォント系
-width height
-margin
-padding
-アルファベット順
+４.Event部分について
+ul liの構造を見直し
+posts_text部分を飛べるようにリンクをつけ、アンダーラインをつける
 
+５.FooterのPAGETOPボタンについて
+位置を修正
+
+６.ページ内のPaddingについて
+mainにつけてしまっていたpaddingを修正し、
+画面いっぱいまでの表示になるように修正
+
+以上です。
 よろしくお願いします。
 
 */
@@ -74,7 +70,6 @@ body{
 }
 
 main{
-  padding: 0 10px;
   background-color: #E8D9BF;
 }
 
@@ -123,11 +118,7 @@ main{
 }
 
 #Aboutus .images{
-  width: 500px;
-  height: 560px;
-  margin-right: 80px;
   border-radius: 0 0 82px 0;
-  object-fit:cover;
 }
 
 .Aboutus_text img{
@@ -135,8 +126,14 @@ main{
   height: 78px;
 }
 
+.Aboutus_image{
+  width: 50%;
+}
+
 .Aboutus_text{
+  width: 50%;
   margin: auto;
+  padding-left: 80px;
 }
 
 .Aboutus_text .catchcopy{
@@ -173,6 +170,7 @@ main{
 .category h3{
   font-size: 38px;
   font-weight: normal;
+  margin-top: -50px;
   color: #D30202;
 }
 
@@ -181,36 +179,6 @@ main{
   line-height: 1.47;
 }
 
-.Drink{
-  position: relative;
-}
-
-.Drink h3{
-  position: absolute;
-  top: 190px;
-  left: 10px;
-}
-
-.Food{
-  position: relative;
-}
-
-.Food h3{
-  position: absolute;
-  top: 190px;
-  left: 10px;
-
-}
-
-.Sweets{
-  position: relative;
-}
-
-.Sweets h3{
-  position: absolute;
-  top: 190px;
-  left: 10px;
-}
 
 /* Gallery */
 #Gallery{
@@ -223,6 +191,10 @@ main{
 
 .gallery_images{
   display: flex;
+}
+
+.gallery_images img{
+  width: 20%;
 }
 
 /* Event */
@@ -242,7 +214,16 @@ main{
 
 .posts{
   margin: auto;
+}
+
+.posts li{
   display: flex;
+}
+
+.posts p{
+  font-size: 23px;
+  line-height: 1.95;
+  letter-spacing: 0.1em;
 }
 
 .posts_date{
@@ -251,13 +232,8 @@ main{
 }
 
 .posts_text{
+  text-decoration:underline;
   width: 80%;
-}
-
-.posts li{
-  font-size: 23px;
-  line-height: 1.95;
-  letter-spacing: 0.1em;
 }
 
 /* Access */
@@ -320,6 +296,6 @@ footer section{
   width: 125px;
   height: 125px;
   position:fixed;
-  right: 15.5%;
-  bottom: 5.3%;
+  right: 20px;
+  bottom: 20px;
 }
