@@ -1,0 +1,31 @@
+$pink: #e128a3;
+$main_color: #17ef8e;
+
+h1{
+  color: $pink;
+  background-color: $main_color;
+  span{
+    background-color: aqua;
+  }
+  @media screen and (max-width:767px) {
+    font-size: 10px;
+    span{
+      color: blue;
+    }
+  }
+}
+
+.btn{
+  display: block;
+  background-color: $main_color;
+  border-radius: 50px;
+  line-height: 50px;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  &:hover{
+    opacity: .5;
+  }
+}
+
+@import "parts.scss"

@@ -1,0 +1,32 @@
+h1 {
+  color: #e128a3;
+  background-color: #17ef8e;
+}
+h1 span {
+  background-color: aqua;
+}
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 10px;
+  }
+  h1 span {
+    color: blue;
+  }
+}
+
+.btn {
+  display: block;
+  background-color: #17ef8e;
+  border-radius: 50px;
+  line-height: 50px;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+}
+.btn:hover {
+  opacity: 0.5;
+}
+
+p {
+  font-size: 40px;
+}/*# sourceMappingURL=style.css.map */
